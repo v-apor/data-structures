@@ -5,8 +5,8 @@ public class Driver{
         list.insert(14, list);
         list.insert(61, list);
         list.insert(75, list);
+        list.insertAt(0, list, 1);
         list.showList(list);
-        list.delete(list);
         list.delete(list);
         list.showList(list);
     }

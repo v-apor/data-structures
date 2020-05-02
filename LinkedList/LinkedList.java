@@ -15,6 +15,21 @@ public class LinkedList{
         }
     }
 
+    public void insertAt(int value, LinkedList list, int pos){
+        Node newNode = new Node(value);
+        Node current = list.head;
+        if(list.head == null){
+            list.head = newNode;   
+        }
+        else{
+            for(int i=1; i<pos; i++){
+                current = current.next;
+            }
+            newNode.next = current.next;
+            current.next = newNode;
+        }
+    }
+
     public void delete(LinkedList list){
         Node current = list.head;
         if(current == null){
@@ -52,7 +67,7 @@ class Node{
     Node next;
     int value;
     Node(int value){
-        System.out.println("Node created w/ value " + value);
+        //System.out.println("Node created w/ value " + value);
         this.value = value;
     }
 }

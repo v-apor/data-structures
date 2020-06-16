@@ -44,8 +44,18 @@ public class LinkedList{
                 current = current.next;
             }
             current.next = null;
+        }   
+    }
+
+    public void deleteFrom(LinkedList list, int position){
+        Node current = list.head;
+        if(current == null){
+            System.out.println("No items in the LL");
         }
-        
+        for(int i=1; i<position; i++){
+            current = current.next;
+        }
+        current = current.next.next;
     }
 
     public void showList(LinkedList list){

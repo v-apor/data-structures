@@ -1,0 +1,3 @@
+1: 16/06/2020:  How data is stored in a computer, CPU <> RAM <> Storage
+		+ What are data structures? 
+		+ What operations can be done? : Insertion, Deletion, Traversal (access each once), searching, sorting, access/lookup

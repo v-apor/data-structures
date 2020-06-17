@@ -1,3 +1,7 @@
 1: 16/06/2020:  How data is stored in a computer, CPU <> RAM <> Storage
 		+ What are data structures? 
 		+ What operations can be done? : Insertion, Deletion, Traversal (access each once), searching, sorting, access/lookup
+
+2: 17/06/2020:  Static array (datatype[]) and Dynamic array (ArrayList in java). Dynamic array allows resizing.
+	        + checked out all functions of arraylist
+		+ Implementation of Dynamic Array in java using primitive static array.

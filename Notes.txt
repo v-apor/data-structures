@@ -5,3 +5,5 @@
 2: 17/06/2020:  Static array (datatype[]) and Dynamic array (ArrayList in java). Dynamic array allows resizing.
 	        + checked out all functions of arraylist
 		+ Implementation of Dynamic Array in java using primitive static array.
+
+3: 19/06/2020: HashTable in java Collection Intro

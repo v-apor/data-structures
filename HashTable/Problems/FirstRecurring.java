@@ -1,11 +1,12 @@
 // problem: return the first recurring character from an array
+// Using HashSet here:
 
 import java.util.HashSet;
 public class FirstRecurring{
 
     public static char getFirst(char[] arr){
         HashSet hSet = new HashSet();
-        for(char ch: arr){
+        for(char ch: arr){              // O(n) : Eg if nothing recurrs
             if(hSet.contains(ch)){
                 return ch;
             }

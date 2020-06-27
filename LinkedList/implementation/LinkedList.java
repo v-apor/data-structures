@@ -33,6 +33,32 @@ public class LinkedList{
             tail = node;
         }
     }
+
+    //addAt
+    public void addAt(int index, int value){
+        Node tmp = head;
+        int strt = 0;
+        if(index == 0){
+            addFirst(value);
+            return;
+        }
+        else if(index == size()){
+            addLast(value);
+            return;
+        }
+        if(index > size()){
+            System.out.println("Index " + index + " is outside Linked List Range");
+            return;
+        }
+        while(strt != index-1){
+            tmp = tmp.next;
+            strt++;
+        }
+        Node n = new Node(value);
+        n.next = tmp.next;
+        tmp.next = n;
+    }
+
     //deleteFirst
     public void deleteFirst(){
         if(head == null){
@@ -61,6 +87,32 @@ public class LinkedList{
             tail.next = null;
         }
     }
+
+    //delete from
+    public void deleteFrom(int index){
+        int start = 0;
+        if(head == tail || head == null){
+            deleteLast();
+            return;
+        }
+
+        if(index == 0){
+            deleteFirst();
+            return;
+        }
+
+        if(index >= size()){
+            System.out.println("Linked List doesn't contain index: " + index);
+            return;
+        }
+        Node tmp = head;
+        while(start != index-1){
+            tmp = tmp.next;
+            start++;
+        }
+        tmp.next = tmp.next.next;
+    }
+
     //contains
     public boolean contains(int value){
         Node tmp = head;

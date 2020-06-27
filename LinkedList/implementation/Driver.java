@@ -2,8 +2,16 @@ public class Driver{
     public static void main(String[] args){
         LinkedList llst = new LinkedList();
         llst.addLast(14);
-        llst.addFirst(12);
+        llst.addFirst(16);
+        llst.addLast(75);
+        llst.addLast(750);
+        llst.showElements();
+        llst.addAt(1, 61);
+        llst.addAt(14, 61);
+        //llst.addAt(4, 61);
         //llst.addLast(100);
+        llst.showElements();
+        llst.deleteFrom(3);
         llst.showElements();
         //llst.deleteLast();
         //llst.showElements();

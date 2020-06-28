@@ -8,4 +8,7 @@
 
 3: 19/06/2020: HashTable in java Collection Intro
 
-4: 27/06/2020: Linked List implementation + Java Linked LIst collection 
+4: 27/06/2020: Linked List implementation + Java Linked List collection 
+
+5: 28/06/2020:  Stack: java collection
+		Queue: Java Interface (LinkedList implementation) I need to know more about interfaces and classes!!

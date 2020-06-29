@@ -12,3 +12,10 @@
 
 5: 28/06/2020:  Stack: java collection
 		Queue: Java Interface (LinkedList implementation) I need to know more about interfaces and classes!!
+
+6: 29/06/2020: Binary Search Tree: implementation (insert and lookup) (remove implementation left) 
+	       + Self balancing BST theory : 
+		1) AVL tree (Balance on every insertion such that difference between left subtree and right subtree (modulo) is <=1
+		   4 cases: (left-left (right rotate); right-right (left rotate); left-right (left-right rotate); right-left) last two are complex
+		2) Red-Black Tree: every node has color red or black and on every insertion we rebalance, there are 6 rules!!!! Man it's complex;
+				

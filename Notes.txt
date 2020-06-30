@@ -19,3 +19,4 @@
 		   4 cases: (left-left (right rotate); right-right (left rotate); left-right (left-right rotate); right-left) last two are complex
 		2) Red-Black Tree: every node has color red or black and on every insertion we rebalance, there are 6 rules!!!! Man it's complex;
 				
+7: 30/06/2020: BitSets in java

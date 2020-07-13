@@ -148,6 +148,16 @@ public class LinkedList{
         return -1;
     }
 
+    // get value at index
+    public int valueAt(int index){
+        Node n = head;
+        while(index>0){
+            n = n.next;
+            index--;
+        }
+        return n.value;
+    }
+
     //showElements
     public void showElements(){
         Node tmp = head;

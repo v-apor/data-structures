@@ -25,3 +25,6 @@
 	       + Heaps DS, Priority Queue in java (PQs are build on top of Heaps) 
 
 9: 03/07/2020: Graphs + Undirected Graph implementation java
+
+10: 18/04/2021: + DS and Algo made easy
+                + Abstract Data Type

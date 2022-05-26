@@ -69,26 +69,94 @@ class LinkedList:
             self.length -= 1
             tmp.next = None
             return tmp
-        
+            
+    def get(self, index):
+        # returns the value at the index
+        if (index+1 > self.length) or (index < 0):
+            return None
+        elif index+1 == self.length:
+            return self.tail
+        else:
+            tmp = self.head
+            for _ in range(index):
+                tmp = tmp.next
+            return tmp
+
+    def set_value(self, index, value):
+        # if (index+1 > self.length) or (index < 0):
+        #     return None
+        # elif index+1 == self.length:
+        #     self.tail.value = value
+        # else:
+        #     tmp = self.head
+        #     for _ in range(index):
+        #         tmp = tmp.next
+        #     tmp.value = value
+
+        # Better use get() to get the node
+        tmp = self.get(index)
+        if tmp is not None:
+            tmp.value = value
+            return True
+        return False
+
+    def insert(self, index, value):
+        if index==0:
+            return self.prepend(value)
+        elif index+1==self.length:
+            return self.append(value)
+        else:
+            new_node = Node(value)
+            tmp = self.get(index-1)
+            if tmp:
+                new_node.next = tmp.next
+                tmp.next = new_node
+                self.length += 1
+                return True
+            return False
+
+    def remove(self, index):
+        if index==0:
+            return self.pop_first()
+        elif index+1==self.length:
+            return self.pop()
+        else:
+            tmp = self.get(index-1)
+            if tmp:
+                toPop = tmp.next
+                tmp.next = toPop.next
+                toPop.next = None
+                self.length -= 1
+                return toPop
+            return None
     
-    
+    def reverse(self):
+        # TODO
 
 
 my_linked_list = LinkedList(14)
 
 my_linked_list.append(75)
 my_linked_list.append(61)
+my_linked_list.insert(1, 22)
+my_linked_list.insert(90, 122)
 my_linked_list.print_list()
-print("popping: ", my_linked_list.pop().value)
+print("value at index 0: ", my_linked_list.get(0).value)
+print("value at index 2: ", my_linked_list.get(2).value)
+my_linked_list.set_value(2, 11)
+print("value at index 2: ", my_linked_list.get(2).value)
+# print("value at index 5: ", my_linked_list.get(5))
 # print("popping: ", my_linked_list.pop().value)
 # print("popping: ", my_linked_list.pop().value)
 # print("popping: ", my_linked_list.pop().value)
-my_linked_list.print_list()
-print("Prepending ", 101)
-my_linked_list.prepend(101)
-my_linked_list.print_list()
-print("popping first:", my_linked_list.pop_first().value)
+# print("popping: ", my_linked_list.pop().value)
+# my_linked_list.print_list()
+# print("Prepending ", 101)
+# my_linked_list.prepend(101)
+# my_linked_list.print_list()
+# print("popping first:", my_linked_list.pop_first().value)
 # print(my_linked_list.pop_first().value, "Popped <-")
 # print(my_linked_list.pop_first().value, "Popped <-")
 # print(my_linked_list.pop_first().value, "Popped <-")
+print("removing: ", my_linked_list.remove(1).value)
 my_linked_list.print_list()

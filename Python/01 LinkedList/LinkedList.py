@@ -130,8 +130,33 @@ class LinkedList:
                 return toPop
             return None
     
+    # Simplest way to reverse would be to create another LL and fill it by popping original LL
     def reverse(self):
-        # TODO
+        # if self.length > 1:
+        #     pre = self.head
+        #     mid = self.head.next
+        #     post = mid.next
+        #     while(mid):
+        #         mid.next = pre
+        #         pre = mid
+        #         mid = post
+        #         post = post.next if post is not None else None
+        # self.head, self.tail = self.tail, self.head
+        # self.tail.next = None
+        # return self
+        pre = None
+        mid = post = self.head
+        while(post):
+            post = mid.next
+            mid.next = pre
+            pre = mid
+            mid = post
+
+        self.head, self.tail = self.tail, self.head
+        self.tail.next = None
+        return self
+
+# 1 2 3 4 5
 
 
 my_linked_list = LinkedList(14)
@@ -159,4 +184,6 @@ print("value at index 2: ", my_linked_list.get(2).value)
 # print(my_linked_list.pop_first().value, "Popped <-")
 # print(my_linked_list.pop_first().value, "Popped <-")
 print("removing: ", my_linked_list.remove(1).value)
+my_linked_list.print_list()
+my_linked_list.reverse()
 my_linked_list.print_list()
